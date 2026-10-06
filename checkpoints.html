@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1">
+
+  <title>Checkpoints</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+  <h1 id="titulo">Checkpoints</h1>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="corridas.html">Corridas</a>
+    <a href="checkpoints.html">Checkpoints</a>
+    <a href="equipes.html">Equipes</a>
+    <a href="passagens.html">Passagens</a>
+  </nav>
+
+</header>
+
+<main class="container">
+
+  <div id="mensagem" class="message hidden"></div>
+
+  <section class="form-box">
+
+    <h2>Cadastro</h2>
+
+    <form id="form">
+
+      <input type="hidden" id="id">
+
+      <label>
+        Local
+        <input id="local" required>
+      </label>
+
+      <label>
+        Professor responsável
+        <input id="professor" required>
+      </label>
+
+      <label>
+        Ordem
+        <input
+          id="ordem"
+          type="number"
+          min="1"
+          required>
+      </label>
+
+      <label>
+        Corrida
+        <select id="corrida" required></select>
+      </label>
+
+      <div class="actions">
+
+        <button>Salvar</button>
+
+        <button
+          type="button"
+          class="secondary"
+          id="cancelar">
+          Limpar
+        </button>
+
+      </div>
+
+    </form>
+
+  </section>
+
+  <section class="table-box">
+
+    <h2>Checkpoints cadastrados</h2>
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Local</th>
+          <th>Professor</th>
+          <th>Ordem</th>
+          <th>Corrida</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+
+      <tbody id="lista"></tbody>
+
+    </table>
+
+  </section>
+
+</main>
+
+<script
+  type="module"
+  src="js/interface/checkpoints.js">
+</script>
+
+</body>
+</html>

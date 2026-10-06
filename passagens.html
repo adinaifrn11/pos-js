@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Corridas</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+
+  <h1 id="titulo">Corridas</h1>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="corridas.html">Corridas</a>
+    <a href="checkpoints.html">Checkpoints</a>
+    <a href="equipes.html">Equipes</a>
+    <a href="passagens.html">Passagens</a>
+  </nav>
+
+</header>
+
+<main class="container">
+
+  <div id="mensagem" class="message hidden"></div>
+
+  <section class="form-box">
+
+    <h2>Cadastro</h2>
+
+    <form id="form">
+
+      <input type="hidden" id="id">
+
+      <label>
+        Nome
+        <input id="nome" required>
+      </label>
+
+      <label>
+        Descrição
+        <textarea id="descricao"></textarea>
+      </label>
+
+      <label>
+        Data
+        <input id="data" type="date" required>
+      </label>
+
+      <div class="actions">
+
+        <button>Salvar</button>
+
+        <button
+          type="button"
+          class="secondary"
+          id="cancelar">
+          Limpar
+        </button>
+
+      </div>
+
+    </form>
+
+  </section>
+
+  <section class="table-box">
+
+    <h2>Corridas cadastradas</h2>
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Descrição</th>
+          <th>Data</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+
+      <tbody id="lista"></tbody>
+
+    </table>
+
+  </section>
+
+</main>
+
+<script
+  type="module"
+  src="js/interface/corridas.js">
+</script>
+
+</body>
+</html>
